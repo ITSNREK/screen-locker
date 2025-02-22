@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    .settings-container { padding: 10px; margin: 10px auto; }
+    .settings-form { gap: 8px; }
+    .form-group { margin-bottom: 5px; }
+    .settings-title { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <div class="settings-container">
+    <h1 class="settings-title">Screen Locker</h1>
+    <div class="settings-form">
+      <div class="form-group">
+        <label for="oldPassword">Current Password:</label>
+        <input type="password" id="oldPassword" placeholder="Enter current password">
+      </div>
+      <div class="form-group">
+        <label for="newPassword">New Password:</label>
+        <input type="password" id="newPassword" placeholder="Enter new password">
+      </div>
+      <p id="passwordMessage" style="margin: 5px 0; font-size: 12px; color: #ff4444;"></p>
+      <button id="savePassword" class="save-button">Update Password</button>
+      <button id="lockNow" class="save-button lock-now-button">Lock Now!</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

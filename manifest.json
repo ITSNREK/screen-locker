@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Screen Locker",
+  "version": "1.0",
+  "description": "Locks screen after inactivity or manually",
+  "permissions": ["storage", "scripting", "tabs", "alarms"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content-script.js"]
+  }]
+}
